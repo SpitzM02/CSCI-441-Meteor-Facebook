@@ -1,0 +1,19 @@
+Project Notes:
+-Some of the components from the videos are switched around slightly- but that's
+just to be able to do some of the extra stuff I added (detailed below)
+
+-Replies to posts do work! I was able to get them functioning at a lower level
+(I.E. component-by-component); meaning added replies do show up. However, because
+the Tracker function automatically runs every time the database updates, Replies
+are counted as their own posts and thus are styled/mapped as such.
+
+Impressive features:
+- There is an extra collection called RedditDbUsers that stores only the users
+that have registered for the site. The login bar on the application can add and
+read users from the current database. The LoginBar component checks to see if a
+registered user is in the database, and (if so) displays the current user logged
+in. This was accomplished using react States with a default variable of 'undefined'
+as the default user.
+
+**note** there is nothing stored in the database as the app loads, you will have
+to register a user to test it out
