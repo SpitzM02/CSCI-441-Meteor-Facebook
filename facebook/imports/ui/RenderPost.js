@@ -12,16 +12,19 @@ export default class RenderPost extends React.Component{
                     <div className='post'>
                         <div>
                             <h3 className='postTopic'>{this.props.post_prop_obj.topic}</h3>
-                            <p className='postStats'>This topic is in place: {this.props.post_prop_obj.position} with {this.props.post_prop_obj.votes} vote(s)</p> {''}
+                            <p className='postStats'>This topic is in place: {this.props.post_prop_obj.position} with {this.props.post_prop_obj.votes} like(s)</p> {''}
                         </div>
                         <div>
                             <button className='postActions' onClick={()=>{
                                 RedditDB.update({_id: this.props.post_prop_obj._id}, {$inc: {votes: 1}});
-                            }}>&lt;3</button>
+                            }}>C</button>
                             <button className='button button--round' onClick={() => {
-                                RedditDB.update({_id: this.props.post_prop_obj._id},{$inc: {votes: -1}})
-                            }}>:(</button>
-                            <button className='button button--round' onClick={() => {
+                                //dont allow negative likes
+                                if(this.props.post_prop_obj.votes>=1){
+                                    RedditDB.update({_id: this.props.post_prop_obj._id},{$inc: {votes: -1}})
+                                }
+                            }}>D</button>
+                            <button onClick={() => {
                                 RedditDB.remove({_id: this.props.post_prop_obj._id})
                             }}>X</button>
                             <ReplyToPost passedPropReplies= {this.props.post_prop_obj}/>

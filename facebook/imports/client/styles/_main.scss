@@ -24,15 +24,15 @@ body{
         border-radius:$border-radius;
         padding:.4%;
     }
-    button{
-        margin-left:40%;
+    button:active{
+        box-shadow:$shadow-inner;
     }
 }
 .title-bar>h1{
     font-size:$fontSize-h1;
     position:absolute;
     top:2vh;
-    left:49vw;
+    left:47vw;
 }
 .title-bar__moderator{
     font-size:30px;
@@ -42,7 +42,7 @@ body{
     font-family: $font-family, sans-serif;
     position:absolute;
     top:0vh;
-    left:80vw;
+    left:75vw;
 }
 .single-block-item-style{
     border-radius:$border-radius;
@@ -50,6 +50,7 @@ body{
     margin-left:35vw;
     width:65vw;
     font-family: $font-family, sans-serif;
+    outline:none;
     :first-child{
         margin-right:.5%;
     }
@@ -62,6 +63,10 @@ body{
     input{
         width:27vw;
         background-color: $color-contrast;
+        border:$border-default;
+    }
+    button:active{
+        box-shadow:$shadow-inner;
     }
     p{
         color:$color-contrast;
@@ -95,6 +100,12 @@ body{
     }
     .postActions{
         margin-left:65%;
+        font-family:'wingdings',$font-family,sans-serif;
+        font-size:$fontSize-button;
+    }
+    .button--round{
+        font-family:'wingdings',$font-family,sans-serif;
+        font-size:$fontSize-button;
     }
     button{
         font-size: $fontSize-button;
@@ -102,13 +113,17 @@ body{
         margin-right:1.5%;
         border-radius:25px;
         outline:none;
+        border:none;
         box-shadow:$shadow-drop;
         margin-top:3%;
         width:8%;
         background-color:lightGray;
     }
+    button:active{
+        box-shadow:$shadow-inner;
+    }
     button:hover{
-        background-color:$color-like;
+        background-color:$color-background;
     }
     button+button:hover{
         background-color:$color-background;

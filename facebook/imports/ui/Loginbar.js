@@ -97,8 +97,8 @@ export default class LoginBar extends React.Component{
                     <label htmlFor="password" name="password" className="userLogin">Password:</label>
                     <input type="text" name="password" className="userLogin" id="password"/>
                     <input type="submit" value="Login"/>
+                    <button onClick={this.registerUser}>Register</button>
                 </form>
-                <button onClick={this.registerUser}>Register</button>
                 <TitleBar
                   title={title}
                   moderator={this.state.moderator}/>
