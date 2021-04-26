@@ -1,11 +1,16 @@
 Project Notes:
--Some of the components from the videos are switched around slightly- but that's
-just to be able to do some of the extra stuff I added (detailed below)
-
 -Replies to posts do work! I was able to get them functioning at a lower level
 (I.E. component-by-component); meaning added replies do show up. However, because
 the Tracker function automatically runs every time the database updates, Replies
-are counted as their own posts and thus are styled/mapped as such.
+are counted as their own posts and thus are styled/mapped as such. Also Replies
+show up on every post which is a bug that I couldnt work out.
+
+-There are checks in place to prevent negative likes on posts. All number of likes
+stop at 0
+
+-As a side note my collections are called RedditDB respectively because I originally
+thought we were just building out a Reddit application
+
 
 Impressive features:
 - There is an extra collection called RedditDbUsers that stores only the users
